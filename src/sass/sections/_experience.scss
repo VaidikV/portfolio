@@ -90,7 +90,7 @@
         font-size: $mid-font-size;
 
         @include respond(phone) {
-          font-size: $mid-font-size; /* Adjust for mobile */
+          font-size: 2rem; /* Adjust for mobile */
           text-align: center; /* Center-align title on mobile */
         }
       }
