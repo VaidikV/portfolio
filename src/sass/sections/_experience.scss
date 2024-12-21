@@ -1,96 +1,107 @@
 #experience {
-    background-color: $white-color;
-    color: $dark-blue-text;
-    margin-top: -10rem;
-    padding-top: 15rem;
-  
-    @include respond(tab-land) {
-      margin-top: 0;
-      padding-top: 5rem;
+  background-color: $white-color;
+  color: $dark-blue-text;
+  margin-top: -10rem;
+  padding-top: 15rem;
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    padding-top: 5rem;
+  }
+
+  .experience-wrapper {
+    position: relative; /* To position the timeline line */
+    margin-bottom: 15rem;
+
+    @include respond(phone) {
+      margin-bottom: 0rem;
     }
-  
-    .experience-wrapper {
-      position: relative; /* To position the timeline line */
-      margin-bottom: 15rem;
-  
+
+    /* Timeline Line */
+    .timeline-line {
+      position: absolute;
+      top: 100;
+      bottom: 0;
+      left: calc(50% - 2px); /* Center the line */
+      border-left: 4px dotted #a3c9f7; /* Dotted line with lighter blue color */
+
       @include respond(phone) {
-        margin-bottom: 0rem;
+        left: calc(50% - 1px); /* Slight adjustment for smaller screens */
+        border-left: 2px dotted #a3c9f7; /* Thinner line on mobile */
       }
-  
-      /* Timeline Line */
-      .timeline-line {
+    }
+
+    .row {
+      position: relative;
+      margin-bottom: 8rem;
+
+      @include respond(phone) {
+        margin-bottom: 6rem; /* Add more spacing for mobile readability */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align content */
+        text-align: center; /* Center text for mobile */
+      }
+
+      .timeline-circle {
         position: absolute;
-        top: 100;
-        bottom: 0;
-        left: calc(50% - 2px); /* Center the line */
-        border-left: 4px dotted #a3c9f7; /* Dotted line with lighter blue color */
-      }
-  
-      .row {
-        position: relative;
-        margin-bottom: 8rem;
-  
+        top: calc(50% - 10px);
+        left: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        background-color: $primary-color; /* Circle color */
+        border-radius: 50%;
+        z-index: 1; /* Ensure it appears above the line */
+
         @include respond(phone) {
-          margin-bottom: 4rem;
-        }
-  
-        .timeline-circle {
-          position: absolute;
-          top: calc(50% - 10px);
-          left: calc(50% - 10px);
-          width: 20px;
-          height: 20px;
-          background-color: $primary-color; /* Circle color */
-          border-radius: 50%;
-          z-index: 1; /* Ensure it appears above the line */
-  
-          @include respond(phone) {
-            left: calc(50% - 10px);
-          }
-        }
-  
-        .timeline-year {
-          position: absolute;
-          top: calc(50% - 10px);
-          left: calc(50% + 30px); /* Position beside the circle */
-          font-size: $small-font-size; /* Use existing variable */
-          font-weight: bold;
-          color: $dark-blue-text;
-  
-          @include respond(phone) {
-            left: calc(50% + 20px); /* Adjust for smaller screens */
-            font-size: $smaller-font-size; /* Ensure variable is defined */
-          }
+          position: static; /* Remove absolute positioning for mobile */
+          margin-bottom: 1rem; /* Add spacing below the circle */
         }
       }
-  
-      &__text {
-        background-color: $white-color; /* Box background */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px, rgba(0, 0, 0, 0.06) 0px 1px 3px; /* Subtle shadow */
-        padding: 2rem; /* Inner padding for the box */
-        text-align: left;
-  
+
+      .timeline-year {
+        position: absolute;
+        top: calc(50% - 10px);
+        left: calc(50% + 30px); /* Position beside the circle */
+        font-size: $small-font-size; /* Use existing variable */
+        font-weight: bold;
+        color: $dark-blue-text;
+
         @include respond(phone) {
-          margin-bottom: 2.5rem !important;
+          position: static; /* Remove absolute positioning for mobile */
+          margin-top: -1rem; /* Add spacing above the year */
+          font-size: $smaller-font-size; /* Ensure smaller font size for mobile */
+          text-align: center; /* Center-align year text for mobile */
         }
-        @include respond(tab-land) {
-          margin-bottom: 4.8rem;
+      }
+    }
+
+    &__text {
+      background-color: $white-color; /* Box background */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px, rgba(0, 0, 0, 0.06) 0px 1px 3px; /* Subtle shadow */
+      padding: 2rem; /* Inner padding for the box */
+      text-align: left;
+
+      @include respond(phone) {
+        margin-bottom: 2.5rem !important;
+        padding-left: 1rem; /* Add some padding adjustments for mobile */
+        padding-right: 1rem;
+      }
+
+      &-title {
+        font-weight: bold;
+        margin-bottom: 1.8rem;
+        font-size: $mid-font-size;
+
+        @include respond(phone) {
+          font-size: $mid-font-size; /* Adjust for mobile */
+          text-align: center; /* Center-align title on mobile */
         }
-  
-        &-title {
-          font-weight: bold;
-          margin-bottom: 1.8rem;
-          font-size: $mid-font-size;
-  
-          @include respond(phone) {
-            font-size: $mid-font-size; /* Adjust for mobile */
-          }
-        }
-  
+      }
+
         p {
           line-height: 1.6; /* Improve readability */
-  
+
         strong {
             color: $secondary-color; /* Highlighted text color */
             font-weight: bold;
@@ -99,4 +110,3 @@
       }
     }
   }
-  
