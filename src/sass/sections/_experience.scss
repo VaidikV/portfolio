@@ -23,9 +23,7 @@
         top: 100;
         bottom: 0;
         left: calc(50% - 2px); /* Center the line */
-        width: 4px; /* Line thickness */
-        background-color: $primary-color; /* Line color */
-        z-index: 0; /* Place behind dots but above background */
+        border-left: 4px dotted #a3c9f7; /* Dotted line with lighter blue color */
       }
   
       .row {

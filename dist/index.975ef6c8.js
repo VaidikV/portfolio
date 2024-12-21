@@ -1080,6 +1080,27 @@ const targetElements = [
         }
     },
     {
+        element: ".timeline-line",
+        animation: {
+            delay: 1000,
+            origin: window.innerWidth > 768 ? "right" : "bottom"
+        }
+    },
+    {
+        element: ".timeline-circle",
+        animation: {
+            delay: 1000,
+            origin: window.innerWidth > 768 ? "right" : "bottom"
+        }
+    },
+    {
+        element: ".timeline-year",
+        animation: {
+            delay: 1000,
+            origin: window.innerWidth > 768 ? "right" : "bottom"
+        }
+    },
+    {
         element: ".project-wrapper__text",
         animation: {
             delay: 500,

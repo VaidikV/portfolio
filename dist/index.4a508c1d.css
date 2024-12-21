@@ -13755,9 +13755,7 @@ section {
 }
 
 #experience .experience-wrapper .timeline-line {
-  z-index: 0;
-  background-color: #2b8bff;
-  width: 4px;
+  border-left: 4px dotted #a3c9f7;
   position: absolute;
   top: 100px;
   bottom: 0;
