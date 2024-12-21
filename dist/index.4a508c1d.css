@@ -13646,8 +13646,8 @@ section {
 
 @media (width <= 75em) {
   #projects {
-    margin-top: 0;
-    padding-top: 5rem;
+    margin-top: -15px;
+    padding-top: 0;
   }
 }
 
