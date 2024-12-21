@@ -13796,8 +13796,7 @@ section {
 
 @media (width <= 37.5em) {
   #experience .experience-wrapper .row .timeline-circle {
-    margin-bottom: 1rem;
-    position: static;
+    display: none;
   }
 }
 
@@ -13812,10 +13811,7 @@ section {
 
 @media (width <= 37.5em) {
   #experience .experience-wrapper .row .timeline-year {
-    text-align: center;
-    margin-top: -1rem;
-    font-size: 1.2rem;
-    position: static;
+    display: none;
   }
 }
 

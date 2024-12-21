@@ -44,8 +44,8 @@
 
       .timeline-circle {
         position: absolute;
-        top: calc(50% - 10px);
-        left: calc(50% - 10px);
+        top: calc(50% - 10px); /* Center vertically relative to the row */
+        left: calc(50% - 10px); /* Center horizontally relative to the timeline line */
         width: 20px;
         height: 20px;
         background-color: $primary-color; /* Circle color */
@@ -53,8 +53,7 @@
         z-index: 1; /* Ensure it appears above the line */
 
         @include respond(phone) {
-          position: static; /* Remove absolute positioning for mobile */
-          margin-bottom: 1rem; /* Add spacing below the circle */
+          display: none;
         }
       }
 
@@ -67,10 +66,7 @@
         color: $dark-blue-text;
 
         @include respond(phone) {
-          position: static; /* Remove absolute positioning for mobile */
-          margin-top: -1rem; /* Add spacing above the year */
-          font-size: $smaller-font-size; /* Ensure smaller font size for mobile */
-          text-align: center; /* Center-align year text for mobile */
+          display: none;
         }
       }
     }
